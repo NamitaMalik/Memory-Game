@@ -5,22 +5,33 @@
 import {Injectable} from "@angular/core";
 @Injectable()
 export class GameBoardService {
-    gridData = [
-        {index: '0', color: 'blue', colorCode: '#0000ee'},
-        {index: '1', color: 'blue', colorCode: '#0000ee'},
-        {index: '2', color: 'green', colorCode: '#00DD00'},
-        {index: '3', color: 'green', colorCode: '#00DD00'},
-        {index: '4', color: 'red', colorCode: '#ff0043'},
-        {index: '5', color: 'red', colorCode: '#ff0043'},
-        {index: '6', color: 'yellow', colorCode: '#FFFFAA'},
-        {index: '7', color: 'yellow', colorCode: '#FFFFAA'},
-        {index: '8', color: 'pink', colorCode: '#f1b8e7'},
-        {index: '9', color: 'pink', colorCode: '#f1b8e7'},
-        {index: '10', color: 'orange', colorCode: '#F4990A'},
-        {index: '11', color: 'orange', colorCode: '#F4990A'},
-        {index: '12', color: 'black', colorCode: '#000000'},
-        {index: '13', color: 'black', colorCode: '#000000'},
-        {index: '14', color: 'purple', colorCode: '#B235CD'},
-        {index: '15', color: 'purple', colorCode: '#B235CD'},
+    private gridData = [
+        {color: 'blue'},
+        {color: 'blue'},
+        {color: 'green'},
+        {color: 'green'},
+        {color: 'red'},
+        {color: 'red'},
+        {color: 'yellow'},
+        {color: 'yellow'},
+        {color: 'pink'},
+        {color: 'pink'},
+        {color: 'orange'},
+        {color: 'orange'},
+        {color: 'black'},
+        {color: 'black'},
+        {color: 'purple'},
+        {color: 'purple'},
     ];
+
+    getData() {
+        let j, temp;
+        for (let i = 0; i < this.gridData.length; i++) {
+            j = Math.floor(Math.random() * (this.gridData.length));
+            temp = this.gridData[i];
+            this.gridData[i] = this.gridData[j];
+            this.gridData[j] = temp;
+        }
+        return this.gridData;
+    }
 }

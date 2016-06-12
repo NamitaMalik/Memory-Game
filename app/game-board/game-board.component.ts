@@ -21,7 +21,7 @@ export class GameBoardComponent {
     }
 
     private lastOpenedCard:GridData;
-    gridData = this.gameBoardService.gridData;
+    gridData = this.gameBoardService.getData();
 
     toggle(data:GridData) {
          var _this = this;

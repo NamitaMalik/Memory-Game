@@ -1,5 +1,4 @@
 <div class="board">
 <div *ngFor="let data of gridData" class="cell bg-image {{data.color}}" [ngClass]="{'bg-image': !data.visible}" (click)="toggle(data)">
-    {{data.color}}
 </div>
 </div>
