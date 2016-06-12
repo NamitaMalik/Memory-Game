@@ -3,6 +3,8 @@
  */
 
 import {Component} from '@angular/core';
+import {GridData} from './grid-data';
+import {GameBoardService} from '../services/game-board.service';
 
 
 @Component({
@@ -13,4 +15,7 @@ import {Component} from '@angular/core';
 })
 
 export class GameBoardComponent {
+    constructor(private gameBoardService:GameBoardService){
+    }
+    gridData = this.gameBoardService.gridData;
 }

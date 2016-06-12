@@ -5,8 +5,9 @@
 import {Component} from '@angular/core';
 import {GameBoardComponent} from "./game-board/game-board.component";
 import {GameInfoComponent} from "./game-info/game-info.component";
-import {GameLogoComponent} from "./game-logo/game-logo.component"
-import {GameResetComponent} from "./game-reset/game-reset.component"
+import {GameLogoComponent} from "./game-logo/game-logo.component";
+import {GameResetComponent} from "./game-reset/game-reset.component";
+import {GameBoardService} from "./services/game-board.service";
 
 @Component({
     selector: 'my-app',
@@ -22,6 +23,7 @@ import {GameResetComponent} from "./game-reset/game-reset.component"
     </div>
     </div>
     `,
+    providers: [GameBoardService],
     directives: [GameBoardComponent, GameInfoComponent, GameLogoComponent, GameResetComponent]
 })
 
