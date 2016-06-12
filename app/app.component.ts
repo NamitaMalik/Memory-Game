@@ -11,12 +11,18 @@ import {GameResetComponent} from "./game-reset/game-reset.component"
 @Component({
     selector: 'my-app',
     template: `
+    <div style="margin: 50px">
+    <div style="float: left">
     <game-board></game-board>
-    <game-info></game-info>
+    </div>
+    <div style="float: right">
     <game-logo></game-logo>
+    <game-info></game-info>
     <game-reset></game-reset>
+    </div>
+    </div>
     `,
-    directives: [GameBoardComponent,GameInfoComponent,GameLogoComponent,GameResetComponent]
+    directives: [GameBoardComponent, GameInfoComponent, GameLogoComponent, GameResetComponent]
 })
 
 export class AppComponent {
