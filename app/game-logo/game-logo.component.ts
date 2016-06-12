@@ -6,11 +6,8 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'game-logo',
-    template: `
-    <div>
-        Game Logo Component
-    </div>
-    `
+    moduleId: module.id,
+    templateUrl: 'game-logo.html'
 })
 
 export class GameLogoComponent {

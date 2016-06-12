@@ -7,11 +7,8 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'game-info',
-    template: `
-    <div>
-        Game Info Component
-    </div>
-    `
+    moduleId: module.id,
+    templateUrl: 'game-info.html'
 })
 
 export class GameInfoComponent {

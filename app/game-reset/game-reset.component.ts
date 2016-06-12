@@ -6,11 +6,8 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'game-reset',
-    template: `
-    <div>
-        Game Reset Component
-    </div>
-    `
+    moduleId: module.id,
+    templateUrl: 'game-reset.html'
 })
 
 export class GameResetComponent {

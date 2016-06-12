@@ -7,11 +7,9 @@ import {Component} from '@angular/core';
 
 @Component({
     selector: 'game-board',
-    template: `
-    <div>
-        Game Board Component
-    </div>
-    `
+    moduleId: module.id,
+    templateUrl: 'game-board.html',
+    styleUrls:['game-board.css']
 })
 
 export class GameBoardComponent {
