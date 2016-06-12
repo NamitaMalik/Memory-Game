@@ -1,7 +1,44 @@
 .board {
-    width: 320px;
-    height: 320px;
-    padding: 100px;
     border: 2px solid black;
-    margin: 25px;
+    height:80%; /* = 100% - 2*10% padding */
+    width:90%; /* = 100% - 2*5% padding */
+    padding: 5px;
+}
+.cell {
+    float:left;
+    width:23%;
+    height:23%;
+    margin:1%;
+}
+
+.red{
+    background-color:#ff0000;
+}
+
+.green{
+background-color: #00DD00;
+}
+
+.yellow{
+background-color: #FFFFAA;
+}
+
+.black{
+background-color: #000000;
+}
+
+.orange{
+background-color: #F4990A;
+}
+
+.purple{
+background-color: #B235CD;
+}
+
+.pink{
+background-color: #f1b8e7;
+}
+
+.blue{
+    background-color: #0000ee;
 }

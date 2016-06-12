@@ -12,8 +12,8 @@ import {GameBoardService} from "./services/game-board.service";
 @Component({
     selector: 'my-app',
     template: `
-    <div style="margin: 50px">
-    <div style="float: left">
+    <div style="margin: 20px">
+    <div style="float: left;width:600px;height:600px">
     <game-board></game-board>
     </div>
     <div style="float: right">
