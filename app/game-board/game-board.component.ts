@@ -19,5 +19,25 @@ import {NgClass} from '@angular/common'
 export class GameBoardComponent {
     constructor(private gameBoardService:GameBoardService){
     }
+    private lastOpenedCard:GridData;
     gridData = this.gameBoardService.gridData;
+
+    toggle(data:GridData){
+        if(!this.lastOpenedCard){
+            data.visible = true;
+            this.lastOpenedCard = data;
+        }
+        else{
+            if(this.lastOpenedCard.color == data.color){
+                data.visible = true;
+                this.lastOpenedCard = null;
+            }else{
+                this.lastOpenedCard.visible = false;
+                data.visible = true;
+                this.lastOpenedCard = data;
+            }
+        }
+
+
+    }
 }

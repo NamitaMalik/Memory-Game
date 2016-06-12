@@ -5,5 +5,6 @@
 export interface GridData {
     index: number;
     color:string;
-    image:string
+    image:string;
+    visible:boolean
 }

@@ -42,3 +42,7 @@ background-color: #f1b8e7;
 .blue{
     background-color: #0000ee;
 }
+
+.bg-image{
+    background-image: url("/app/game-board/card_bg.gif");
+}
