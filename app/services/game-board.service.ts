@@ -3,26 +3,26 @@
  */
 
 import {Injectable} from "@angular/core";
-import {GridData} from './grid-data';
+import {GridData} from '../game-board/grid-data';
 @Injectable()
 export class GameBoardService {
     private gridData:GridData[] = [
-        {color: 'blue'},
-        {color: 'blue'},
-        {color: 'green'},
-        {color: 'green'},
-        {color: 'red'},
-        {color: 'red'},
-        {color: 'yellow'},
-        {color: 'yellow'},
-        {color: 'pink'},
-        {color: 'pink'},
-        {color: 'orange'},
-        {color: 'orange'},
-        {color: 'black'},
-        {color: 'black'},
-        {color: 'purple'},
-        {color: 'purple'},
+        {color: 'blue',visible: false},
+        {color: 'blue',visible: false},
+        {color: 'green',visible: false},
+        {color: 'green',visible: false},
+        {color: 'red',visible: false},
+        {color: 'red',visible: false},
+        {color: 'yellow',visible: false},
+        {color: 'yellow',visible: false},
+        {color: 'pink',visible: false},
+        {color: 'pink',visible: false},
+        {color: 'orange',visible: false},
+        {color: 'orange',visible: false},
+        {color: 'black',visible: false},
+        {color: 'black',visible: false},
+        {color: 'purple',visible: false},
+        {color: 'purple',visible: false},
     ];
 
     public lastOpenedCard:GridData;
