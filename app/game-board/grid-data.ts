@@ -3,8 +3,6 @@
  */
 
 export interface GridData {
-    index: number;
     color:string;
-    image:string;
-    visible:boolean
+    visible:boolean;
 }

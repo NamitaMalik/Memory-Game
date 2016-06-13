@@ -3,9 +3,10 @@
  */
 
 import {Injectable} from "@angular/core";
+import {GridData} from './grid-data';
 @Injectable()
 export class GameBoardService {
-    private gridData = [
+    private gridData:GridData[] = [
         {color: 'blue'},
         {color: 'blue'},
         {color: 'green'},
@@ -23,6 +24,8 @@ export class GameBoardService {
         {color: 'purple'},
         {color: 'purple'},
     ];
+
+    public lastOpenedCard:GridData;
 
     getData() {
         let j, temp;
