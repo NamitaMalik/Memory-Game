@@ -25,8 +25,6 @@ export class GameBoardService {
         {color: 'purple',visible: false},
     ];
 
-    public lastOpenedCard:GridData;
-
     getData() {
         let j, temp;
         for (let i = 0; i < this.gridData.length; i++) {

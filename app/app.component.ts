@@ -2,7 +2,7 @@
  * Created by namita on 6/12/16.
  */
 
-import {Component} from '@angular/core';
+import {Component,ViewChild} from '@angular/core';
 import {GameBoardComponent} from "./game-board/game-board.component";
 import {GameInfoComponent} from "./game-info/game-info.component";
 import {GameLogoComponent} from "./game-logo/game-logo.component";
@@ -28,7 +28,8 @@ import {GameBoardService} from "./services/game-board.service";
 })
 
 export class AppComponent {
+    @ViewChild(GameBoardComponent) gameBoard:GameBoardComponent;
     resetGame(){
-        console.log("inside");
+        this.gameBoard.clearBoard();
     }
 }

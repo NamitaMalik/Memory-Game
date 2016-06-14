@@ -20,26 +20,36 @@ export class GameBoardComponent {
     constructor(private gameBoardService:GameBoardService) {
     }
 
+    private lastOpenedCard:GridData = null;
+
     gridData = this.gameBoardService.getData();
 
     toggle(data:GridData) {
          var _this = this;
         data.visible = true;
-        if (!_this.gameBoardService.lastOpenedCard) {
-            _this.gameBoardService.lastOpenedCard = data;
+        if (!_this.lastOpenedCard) {
+            _this.lastOpenedCard = data;
         }
         else {
-            if (_this.gameBoardService.lastOpenedCard.color == data.color) {
-                _this.gameBoardService.lastOpenedCard = null;
+            if (_this.lastOpenedCard.color == data.color) {
+                _this.lastOpenedCard = null;
             } else {
                 setTimeout(function () {
                     data.visible = false;
-                    _this.gameBoardService.lastOpenedCard.visible = false;
-                    _this.gameBoardService.lastOpenedCard = null;
+                    _this.lastOpenedCard.visible = false;
+                    _this.lastOpenedCard = null;
                 }, 200);
             }
         }
 
 
+    }
+
+    clearBoard(){
+        this.gridData = this.gameBoardService.getData();
+        this.gridData.forEach(function(value){
+           value.visible = false;
+        });
+        this.lastOpenedCard = null;
     }
 }
