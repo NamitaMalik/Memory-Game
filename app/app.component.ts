@@ -19,7 +19,7 @@ import {GameBoardService} from "./services/game-board.service";
     <div style="float: right">
     <game-logo></game-logo>
     <game-info></game-info>
-    <game-reset></game-reset>
+    <game-reset (gameReset)="resetGame()"></game-reset>
     </div>
     </div>
     `,
@@ -28,4 +28,7 @@ import {GameBoardService} from "./services/game-board.service";
 })
 
 export class AppComponent {
+    resetGame(){
+        console.log("inside");
+    }
 }

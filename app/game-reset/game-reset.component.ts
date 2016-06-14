@@ -2,7 +2,7 @@
  * Created by namita on 6/12/16.
  */
 
-import {Component} from '@angular/core';
+import {Component,Output,EventEmitter} from '@angular/core';
 import {GridData} from '../game-board/grid-data';
 import {GameBoardService} from '../services/game-board.service';
 
@@ -15,12 +15,10 @@ import {GameBoardService} from '../services/game-board.service';
 export class GameResetComponent {
     constructor(private gameBoardService:GameBoardService) {
     }
+    @Output() gameReset = new EventEmitter();
+
     resetGame(){
-        let gridData = this.gameBoardService.getData();
-        gridData.forEach(function(value){
-            console.log(value);
-            value.visible = false;
-        });
-        this.gameBoardService.lastOpenedCard = null;
+        this.gameReset.emit("");
     }
+
 }
